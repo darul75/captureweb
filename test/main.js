@@ -1,41 +1,35 @@
 // test/main.js
-var starter = require('../src/starter-aws');
+var captureweb = require('../src/captureweb');
 var assert = require("assert");
 
 describe('service calls', function() {
-    describe('with bad application options', function() {
-        it('arguments', function(done) {
+    describe('default render when start', function() {
+        it('arguments', function(done) {        	
+        			  
+		    captureweb.capture({url: 'https://github.com', 
+		                     mime: 'image/png', 
+		                     viewportSize: { width: 1280, height: 1024 } }, function(err, stream) {
+		       if (err) {          
+		       	  console.log(err);		          
+		          return;          
+		        }		        
 
-			starter.initCredentials({
-				"accessKeyId": "YOUR_ACCESS_KEY_ID",
-				"secretAccessKey": "YOUR_SECRET_ACCESS_KEY",
-				"region": "us-west-1",
-				"instancesId": "XXXXX",
-				"state": "start"
-			});
+		        var data = '';		        
 
-			starter.starter(function(err, geoData) {
-				if (err) console.log(err.toString());                              
+		        stream.on('data', function(d){ 
+		        	data += d; 
+		        });
 
-				assert.equal(err, 'Error: AWS was not able to validate the provided access credentials');               
+				stream.on('end', function(){
+					console.log('ok stream is here');
+					assert.equal(1, 1);
+					done();
+				});		        		        
+		                   
+		    });	        
 
-				done();
-			});
-
-		});
-
-		it('file', function(done) {
-
-			starter.initFileCredentials();
-
-			starter.starter(function(err, geoData) {
-				if (err) console.log(err.toString());                              
-
-				assert.equal(err, 'Error: AWS was not able to validate the provided access credentials');               
-
-				done();
-			});
-
-		});
-	});
+	        this.timeout(19000);
+        });
+    });
 });
+		
