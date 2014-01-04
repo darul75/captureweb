@@ -54,6 +54,15 @@ captureweb.capture({
   // ...
 	
 });
+
+// MORE APIs
+
+// STOP SERVER
+captureweb.stopServer();
+
+// BY DEFAULT STARTED
+captureweb.startServer(5001);
+
 ```    
     
 ## Parameters
