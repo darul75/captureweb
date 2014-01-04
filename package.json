@@ -1,0 +1,43 @@
+{
+  "name": "captureweb",
+  "description": "NodeJS module for capturing entire web with screenshots",
+  "version": "0.0.1",
+  "author": {
+    "name": "Julien Valéry",
+    "email": "darul75@gmail.com"
+  },
+  "homepage": "https://github.com/darul75/captureweb",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/darul75/captureweb.git"
+  },  
+  "keywords": [    
+    "phantomjs",
+    "screenshots",
+    "server",
+    "snapshot",
+    "test",
+    "headless"
+  ],
+  "main": "./lib/captureweb",
+  "scripts": {
+    "test": "mocha test/*.js"
+  },
+  "engines": {
+    "node": ">=0.6.x"
+  },
+  "dependencies": {
+    "phantomjs": "1.9.2-6"
+  },
+  "devDependencies": {   
+    "mocha": "",
+    "grunt": "latest",
+    "grunt-contrib-jshint": "latest",
+    "grunt-contrib-uglify": "latest"
+  },
+  "bugs": {
+    "url": "https://github.com/darul75/captureweb/issues"
+  },
+  "readmeFilename": "README.md",
+  "license": "MIT"
+}
