@@ -5,10 +5,12 @@ var url = args[1];
 var filename = args[2];
 var viewportSize = args[3];
 
+console.log(url);
+
 if (viewportSize) {
 	page.viewportSize = {
-		width : viewportSize.split('x')[0],
-		height : viewportSize.split('x')[1]
+		width : viewportSize.split(' ')[0],
+		height : viewportSize.split(' ')[1]
 	};
 }
 

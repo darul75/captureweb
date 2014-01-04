@@ -7,6 +7,7 @@ var path = require('path');
 var paths = {};
 
 paths.temp_directory =  path.resolve('temp');
+var script = __dirname + '/script1.js';
 
 function Server() {
 
@@ -85,7 +86,7 @@ Server.prototype.handler = function (request, response) {
 };
 
 Server.prototype.render = function(message, next) {
-  this.renderer.exec('script1.js', [message.url, message.handle, message.viewportSize], next);
+  this.renderer.exec(script, [message.url, message.handle, message.viewportSize], next);
 };
 
 Server.prototype.json = function (request, callback) {
@@ -202,7 +203,9 @@ Server.prototype.validate = function (message, callback) {
     }
 
     if (message.viewportSize && message.viewportSize.width && message.viewportSize.height) {
-      message.viewportSize = message.viewportSize.width+'x'+message.viewportSize.height;
+      var w = message.viewportSize.width;
+      var h = message.viewportSize.height;
+      message.viewportSize = w+' '+h;
     }
 
     if (errors.length > 0) {
