@@ -4,8 +4,8 @@
 
 function CaptureWeb() {
 
-  this.serverPort = 3001;
-  this.clientServerPort = 3002;
+  this.serverPort = 5001;
+  this.clientServerPort = 5002;
 
   this.server = require('./server');
 
