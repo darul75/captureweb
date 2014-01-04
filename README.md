@@ -4,7 +4,7 @@ captureweb [![NPM version](https://badge.fury.io/js/captureweb.png)](http://badg
 Capture websites with screenshot or pdf.
 
 * By default a small node server handle request and conversion, default port 5001
-* By default another small node server handle request as a proxy client, default port 5002
+* By default another small node server is started for a first test, default port 5002, maybe I remove it later ;)
 
 But you do not have to worry to much about it.
 
