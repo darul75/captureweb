@@ -1,4 +1,4 @@
-captureweb [![NPM version](https://badge.fury.io/js/captureweb.png)](http://badge.fury.io/js/captureweb) [![Build Status](https://travis-ci.org/darul75/captureweb?branch=master)](https://travis-ci.org/darul75/captureweb) [![Total views](https://sourcegraph.com/api/repos/github.com/darul75/captureweb/counters/views.png)](https://sourcegraph.com/github.com/darul75/captureweb)
+captureweb [![NPM version](https://badge.fury.io/js/captureweb.png)](http://badge.fury.io/js/captureweb) [![Build Status](https://travis-ci.org/darul75/captureweb.png?branch=master)](https://travis-ci.org/darul75/captureweb) [![Total views](https://sourcegraph.com/api/repos/github.com/darul75/captureweb/counters/views.png)](https://sourcegraph.com/github.com/darul75/captureweb)
 =====================
 
 Capture websites with screenshot or pdf.
