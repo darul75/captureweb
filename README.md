@@ -28,7 +28,7 @@ Usage
 ```javascript
 var captureweb = require('captureweb');
 
-satelize.capture({
+captureweb.capture({
       url: 'https://github.com', 
       mime: 'image/png', 
       viewportSize: { width: 1280, height: 1024 } 
