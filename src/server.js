@@ -86,7 +86,7 @@ Server.prototype.handler = function (request, response) {
 };
 
 Server.prototype.render = function(message, next) {
-  this.renderer.exec(script, [message.url, message.handle, message.viewportSize], next);
+  this.renderer.exec(script, [message.url, message.handle, message.viewportSize, message.viewportRect], next);
 };
 
 Server.prototype.json = function (request, callback) {
@@ -202,10 +202,18 @@ Server.prototype.validate = function (message, callback) {
         }
     }
 
-    if (message.viewportSize && message.viewportSize.width && message.viewportSize.height) {
-      var w = message.viewportSize.width;
-      var h = message.viewportSize.height;
-      message.viewportSize = w+' '+h;
+    if (message.viewportSize && message.viewportSize.w && message.viewportSize.h) {
+      var w = message.viewportSize.w;
+      var h = message.viewportSize.h;
+      message.viewportSize = w+'x'+h;
+    }
+
+    if (message.viewportRect && message.viewportRect.top && message.viewportRect.left && message.viewportRect.w && message.viewportRect.h) {
+      var w1 = message.viewportRect.w;
+      var h1 = message.viewportRect.h;
+      var t = message.viewportRect.top;
+      var l = message.viewportRect.left;
+      message.viewportRect = t+','+l+','+w1+','+h1;
     }
 
     if (errors.length > 0) {

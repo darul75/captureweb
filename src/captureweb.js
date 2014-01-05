@@ -26,7 +26,9 @@ function CaptureWeb() {
   // FIRST TEST
   this.capture({url: 'https://github.com', 
                      mime: 'image/png', 
-                     viewportSize: { width: 1280, height: 1024 } }, function(err, stream) {
+                     viewportSize: { w: 1280, h: 1024 },
+                     viewportRect: { top: 20, left: 20, w: 400, h:300 }
+                      }, function(err, stream) {
     stream.pipe(require('fs').createWriteStream("github.png"));
   });
 }
@@ -54,7 +56,7 @@ CaptureWeb.prototype.startClientServer = function(port) {
 
     this_.capture({url: 'https://github.com', 
                      mime: mime, 
-                     viewportSize: { width: 1280, height: 1024 } }, function(err, stream) {
+                     viewportSize: { w: 1280, h: 1024 } }, function(err, stream) {
        if (err) {          
           res.setHeader('Content-Type', 'text/html');
           res.write(err.toString());

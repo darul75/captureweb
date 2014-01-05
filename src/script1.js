@@ -4,30 +4,26 @@ var args = require('system').args;
 var url = args[1];
 var filename = args[2];
 var viewportSize = args[3];
-
-console.log(url);
+var viewportRect= args[4];
 
 if (viewportSize) {
 	page.viewportSize = {
-		width : viewportSize.split(' ')[0],
-		height : viewportSize.split(' ')[1]
+		width : viewportSize.split('x')[0],
+		height : viewportSize.split('x')[1]
 	};
 }
-
-// page.viewportSize = {
-//   width : 480, height : 800
-// }
 
 // var timeout = args[3];
 // var cut = args[4] == 'true';
 // var cookie = args[5];
 
-// if (true) page.clipRect = {
-//	top: 0,
-//	left: 0,
-//	width: 480,
-//	height: 800
-// }
+if (viewportRect) 
+	page.clipRect = {
+		top: viewportRect.split(',')[0],
+		left: viewportRect.split(',')[1],
+		width: viewportRect.split(',')[2],
+		height: viewportRect.split(',')[3]
+	};
 
 // page.scrollPosition = {
 //   top: 100,
