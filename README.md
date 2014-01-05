@@ -8,6 +8,10 @@ Capture websites with screenshot or pdf.
 
 But you do not have to worry about it.
 
+Preview
+------------
+![capture web screenshot](http://darul75.github.io/ng-prettyjson/images/captureweb.png "capture web screenshot")
+
 Demo
 ------------
 http://darul-demo.herokuapp.com/captureweb
