@@ -31,7 +31,7 @@ var captureweb = require('captureweb');
 captureweb.capture({
       url: 'https://github.com', 
       mime: 'image/png', 
-      viewportSize: { width: 1280, height: 1024 },
+      viewportSize: { w: 1280, h: 1024 },
       viewportRect: { top: 20, left: 20, w: 400, h:300 }
       }, function(err, stream) {
   // process err
@@ -70,7 +70,7 @@ captureweb.startServer(5001);
 
 * `url` site to capture https://www.google.fr/#q=captureweb
 * `mime` mime type 'image/png', 'application/pdf'
-* `viewportSize` (optional) viewport resolution, embedded json ex: {width: 200, height: 222}
+* `viewportSize` (optional) viewport resolution, embedded json ex: {w: 200, h: 222}
 * `viewportRect` (optional) clip rectangle area, embedded json ex: { top: 20, left: 20, w: 400, h:300 }
 - MORE COMING SOON
 
