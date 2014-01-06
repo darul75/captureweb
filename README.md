@@ -36,7 +36,8 @@ captureweb.capture({
       url: 'https://github.com', 
       mime: 'image/png', 
       viewportSize: { w: 1280, h: 1024 },
-      viewportRect: { top: 20, left: 20, w: 400, h:300 }
+      viewportRect: { top: 20, left: 20, w: 400, h:300 },
+      userAgent:'Mozilla/5.0 (Macintosh; Intel Mac............',
       }, function(err, stream) {
   // process err
   
