@@ -76,6 +76,8 @@ captureweb.startServer(5001);
 * `mime` mime type 'image/png', 'application/pdf'
 * `viewportSize` (optional) viewport resolution, embedded json ex: {w: 200, h: 222}
 * `viewportRect` (optional) clip rectangle area, embedded json ex: { top: 20, left: 20, w: 400, h:300 }
+* `userAgent` (optional) set device User-Agent
+
 - MORE COMING SOON
 
 ### Build
