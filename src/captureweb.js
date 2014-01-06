@@ -27,8 +27,9 @@ function CaptureWeb() {
   this.capture({url: 'https://github.com', 
                      mime: 'image/png', 
                      viewportSize: { w: 1280, h: 1024 },
+                     userAgent: 'Mozilla/5.0 (iPhone; U; CPU iPhone OS 4_2_1 like Mac OS X; da-dk) AppleWebKit/533.17.9 (KHTML, like Gecko) Version/5.0.2 Mobile/8C148 Safari/6533.18.5',
                      viewportRect: { top: 20, left: 20, w: 400, h:300 }
-                      }, function(err, stream) {
+                    }, function(err, stream) {
     stream.pipe(require('fs').createWriteStream("github.png"));
   });
 }

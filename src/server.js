@@ -86,7 +86,24 @@ Server.prototype.handler = function (request, response) {
 };
 
 Server.prototype.render = function(message, next) {
-  this.renderer.exec(script, [message.url, message.handle, message.viewportSize, message.viewportRect], next);
+
+  if (!message.viewportSize) {
+    message.viewportSize = { w: 2560, h: 1440 }; // 2560x1440
+  }
+
+  if (!message.viewportRect && message.userAgent) {
+    message.viewportRect = {
+      viewportRect: { top: 0, left: 0, w: message.viewportSize.w, h:message.viewportSize.h }
+    };
+  }
+
+  this.renderer.exec(script, [
+    message.url, 
+    message.handle, 
+    message.viewportSize, 
+    message.viewportRect, 
+    message.userAgent
+  ], next);
 };
 
 Server.prototype.json = function (request, callback) {

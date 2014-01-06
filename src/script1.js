@@ -5,6 +5,7 @@ var url = args[1];
 var filename = args[2];
 var viewportSize = args[3];
 var viewportRect= args[4];
+var userAgent= args[5];
 
 if (viewportSize) {
 	page.viewportSize = {
@@ -30,7 +31,11 @@ if (viewportRect)
 //   left: 0
 // };
 
-page.settings.userAgent = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/31.0.1650.63 Safari/537.36';
+if (userAgent)
+	page.settings.userAgent = userAgent;
+else
+	page.settings.userAgent = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/31.0.1650.63 Safari/537.36';
+
 //page.navigationLocked = true;
 
 page.open(url, function(status) {
