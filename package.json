@@ -1,7 +1,7 @@
 {
   "name": "captureweb",
   "description": "NodeJS module for capturing entire web with screenshots",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "author": {
     "name": "Julien Valéry",
     "email": "darul75@gmail.com"
