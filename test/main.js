@@ -27,7 +27,7 @@ describe('service calls', function() {
 
 			});
 
-			this.timeout(19000);
+			this.timeout(30000);
 		});
 	});
 });
