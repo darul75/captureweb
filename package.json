@@ -1,7 +1,7 @@
 {
   "name": "captureweb",
   "description": "NodeJS module for capturing entire web with screenshots",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "author": {
     "name": "Julien Valéry",
     "email": "darul75@gmail.com"
@@ -27,7 +27,7 @@
     "node": ">=0.6.x"
   },
   "dependencies": {
-    "phantomjs": "1.9.2-6"
+    "phantomjs": "1.9.13"
   },
   "devDependencies": {   
     "mocha": "",
